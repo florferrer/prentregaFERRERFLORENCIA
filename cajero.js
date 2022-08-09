@@ -1,4 +1,29 @@
-const flor = {
+const user = {
+  name: "flor",
+  pass: "111",
+};
+
+const loginButton = document.getElementById("login");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("pass");
+const loginForm = document.getElementById("login-form");
+const welcomeDiv = document.getElementById("welcome");
+
+loginButton.addEventListener("click", () => {
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  // totalAmount = totalAmount - extract;
+
+  if (username === user.name && password === user.pass) {
+    loginForm.style.display = "none";
+    welcomeDiv.style.display = "block";
+  } else {
+    alert("Pin o usuario incorrecto!");
+  }
+});
+
+/* const flor = {
   nombre: "flor",
   pin: 111,
 };
@@ -18,13 +43,13 @@ function restar(retiro) {
 function pasarADolar(ars) {
   const usd = ars * 0.00027;
   return usd;
-}
+} */
 
 /* ==================================================== */
 /* ==================================================== */
 /* ==================================================== */
 
-const nombreDelUsuario = prompt("Ingrese su nombre");
+/* const nombreDelUsuario = prompt("Ingrese su nombre");
 const pinDelUsuario = parseInt(prompt("Ingrese su PIN"));
 let operacion;
 
@@ -55,3 +80,4 @@ if (operacion === "2") {
 } else {
   alert("Pin o usuario incorrecto");
 }
+ */
